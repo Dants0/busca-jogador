@@ -37,11 +37,11 @@ const SearchPlayerByNameValue = () => {
   const baseUrl = `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${searchPlayer}`
 
 
-  async function searchPlayerByName(e) {
+  function searchPlayerByName(e) {
     if (!searchPlayer) {
       alert('Digite antes de pesquisar');
     } else {
-       await axios.get(baseUrl)
+      axios.get(baseUrl)
         .then(res => {
           const playersTeste = {
             data: res.data.player

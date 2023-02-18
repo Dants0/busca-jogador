@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
 import NavBar from '../../components/Navbar/NavBar'
 
 import SearchPlayerByNameValue from '../../components/SearchPlayer/SearchPlayerByNameValue'
@@ -8,6 +9,7 @@ const Pesquisar = () => {
     <>
         <NavBar/>
         <SearchPlayerByNameValue/>
+        <Footer/>
     </>
   )
 }

@@ -3,5 +3,5 @@ import relativeTime from "dayjs/plugin/relativeTime"
 dayjs.extend(relativeTime)
 
 export default function getYearsOld(born_date){
-    return console.log(dayjs(born_date).fromNow(true))
+    return dayjs(born_date).fromNow(true)
 }
