@@ -1,0 +1,34 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --text-color-anchor: #011f72ea;
+    --text-color-anchor-hover: #001aff;
+}  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+body.dark{
+    background: #292c35;
+    color: #000;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color-anchor);
+    font-weight: bold;
+}
+
+a:hover{
+    color: var(--text-color-anchor-hover);
+    transition: all 0.5s ease-in-out;
+}

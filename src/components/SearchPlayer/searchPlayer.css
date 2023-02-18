@@ -1,0 +1,44 @@
+button {
+    cursor: pointer;
+    border-radius: 25px;
+    width: 8rem;
+    padding: 0.25rem;
+    height: 2.80vh;
+    outline: none;
+    border: none;
+    box-shadow: 0 1px 0 0 blue;
+}
+
+button:hover{
+    font-weight: bold;
+}
+
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 2rem;
+}
+
+.searchBar {
+    width: 25rem;
+    padding: 0.9rem;
+    height: 2.80vh;
+    text-align: start;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    box-shadow: 0 1px 0 1px blue;
+    font-size: 16px;
+}
+
+.info-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 2rem;
+}
