@@ -61,7 +61,15 @@ const SearchPlayerByNameValue = () => {
   }
 
 
-
+  function exportDataPlayer(){
+    const fileData = JSON.stringify(players)
+    const blob = new Blob([fileData], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.download = 'player-info.json'
+    link.href = url;
+    link.click()
+  }
 
 
   return (
@@ -100,10 +108,13 @@ const SearchPlayerByNameValue = () => {
               <a href={`//${players.twitter}`} target="_blank" rel='noopener noreferrer'>
                 <TwitterLogo size={28} color="#1d1d1b" weight="thin" />
               </a>
+            <button onClick={exportDataPlayer}>Baixe os dados</button>
             </>
             :
             ''
+
         }
+
       </div>
     </>
   )
