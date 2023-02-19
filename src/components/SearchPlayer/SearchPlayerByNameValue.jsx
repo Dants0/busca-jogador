@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { InstagramLogo, TwitterLogo } from 'phosphor-react'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import errorController from '../../utils/erroControler'
+import exportDataPlayer from '../../utils/exportDataFIle'
 import fixDateBorn from '../../utils/fixDateBorn'
 import getYearsOld from '../../utils/getYearsOld'
 
@@ -61,17 +61,6 @@ const SearchPlayerByNameValue = () => {
   }
 
 
-  function exportDataPlayer(){
-    const fileData = JSON.stringify(players)
-    const blob = new Blob([fileData], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.download = 'player-info.json'
-    link.href = url;
-    link.click()
-  }
-
-
   return (
     <>
       <div className='search-box'>
@@ -108,7 +97,7 @@ const SearchPlayerByNameValue = () => {
               <a href={`//${players.twitter}`} target="_blank" rel='noopener noreferrer'>
                 <TwitterLogo size={28} color="#1d1d1b" weight="thin" />
               </a>
-            <button onClick={exportDataPlayer}>Baixe os dados</button>
+            <button onClick={exportDataPlayer(players)}>Baixe os dados</button>
             </>
             :
             ''
