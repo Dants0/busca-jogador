@@ -97,7 +97,7 @@ const SearchPlayerByNameValue = () => {
               <a href={`//${players.twitter}`} target="_blank" rel='noopener noreferrer'>
                 <TwitterLogo size={28} color="#1d1d1b" weight="thin" />
               </a>
-            <button onClick={exportDataPlayer(players)}>Baixe os dados</button>
+            <button onClick={() => exportDataPlayer(players)}>Baixe os dados</button>
             </>
             :
             ''
